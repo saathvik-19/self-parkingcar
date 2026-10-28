@@ -87,7 +87,7 @@ More in [`docs/SYSTEM_NOTES.md`](docs/SYSTEM_NOTES.md).
 - [x] 4WD cardboard chassis built, motors verified forward, backward and spin
 - [x] ESP32 uploads working, servo sweeps on its own
 - [x] Soft-start motion sequence runs (straight-line drift being trimmed)
-- [ ] HC-SR04 readings verified with the echo divider on the car
+- [X] HC-SR04 readings verified with the echo divider on the car
 - [ ] Car and lot talking over Wi-Fi on real hardware
 - [ ] Parking lot model built and sensors calibrated
 - [ ] Full autonomous gate-to-slot run
