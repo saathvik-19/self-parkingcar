@@ -4,7 +4,7 @@ A small autonomous car that drives to a parking-lot gate, receives a slot number
 
 > **Edit the Status and Results sections before publishing so they match what you have actually tested.** Everything below is written to be honest about what works and what does not yet.
 
-![Car wiring](hardware/car_wiring_diagram.png)
+![Car wiring](car_wiring_diagram.png)
 
 ## What it does
 
@@ -48,7 +48,7 @@ Safety checks: median-of-three sensor readings, two consecutive readings before 
 
 ## Hardware
 
-See [`hardware/BOM.md`](hardware/BOM.md) and the wiring diagrams in [`hardware/`](hardware/).
+See [`hardware/BOM.md`](BOM.md) and the wiring diagrams.
 
 - Car: ESP32 DevKit, L298N, 4 TT gear motors (two per side in parallel, skid steering), SG90 servo, HC-SR04, 2 × 18650 cells for the motors, separate power bank for the ESP32.
 - The HC-SR04 Echo pin is 5 V and the ESP32 is 3.3 V, so Echo goes through a 1 kΩ + 2 kΩ divider.
@@ -58,13 +58,13 @@ See [`hardware/BOM.md`](hardware/BOM.md) and the wiring diagrams in [`hardware/`
 
 | Folder | What it is |
 |---|---|
-| `firmware/car/parking_car_final` | Car program: gate, slot targeting, verify, park |
-| `firmware/lot/parking_controller` | Lot controller: sensors, Wi-Fi access point, dashboard, auto-dispatch |
-| `firmware/car-tests/step1_motor_test` | Checks wiring: each side, both, spins |
-| `firmware/car-tests/car_ramp_run` | Soft-start run: forward, turn left/right, 180, forward |
-| `firmware/car-tests/servo_sweep_test` | Sweeps the servo on its own |
-| `firmware/car-tests/servo_sensor_test` | Obstacle avoidance using the servo scan |
-| `firmware/prototype-arduino-obstacle-car` | The earlier Arduino Uno obstacle-avoiding car (first prototype) |
+| `parking_car_final` | Car program: gate, slot targeting, verify, park |
+| `parking_controller` | Lot controller: sensors, Wi-Fi access point, dashboard, auto-dispatch |
+| `step1_motor_test` | Checks wiring: each side, both, spins |
+| `car_ramp_run` | Soft-start run: forward, turn left/right, 180, forward |
+| `servo_sweep_test` | Sweeps the servo on its own |
+| `servo_sensor_test` | Obstacle avoidance using the servo scan |
+| `prototype-arduino-obstacle-car` | The earlier Arduino Uno obstacle-avoiding car (first prototype) |
 
 **Libraries:** ESP32Servo (Library Manager). Wi-Fi, HTTPClient and WebServer come with the ESP32 core. Board: *ESP32 Dev Module*.
 
@@ -77,7 +77,7 @@ The distances in the car sketch are placeholders until measured on your own layo
 - `TURN_90_MS`: time for a clean 90° turn on your floor
 - `LEFT_TRIM` / `RIGHT_TRIM`: speed added to a side to make the car go straight (if it veers left, raise `LEFT_TRIM`)
 
-More in [`docs/SYSTEM_NOTES.md`](docs/SYSTEM_NOTES.md).
+More in [`SYSTEM_NOTES.md`](SYSTEM_NOTES.md).
 
 ## Status
 
@@ -118,9 +118,9 @@ The firmware was syntax-checked against both ESP32 Arduino core 2.x and 3.x APIs
 ## Repository layout
 
 ```
-firmware/   car, lot, test sketches, first Arduino prototype
-hardware/   BOM and wiring diagrams
-docs/       system notes (protocol, geometry, calibration)
+   car, lot, test sketches, first Arduino prototype
+   BOM and wiring diagrams
+   system notes (protocol, geometry, calibration)
 ```
 
 ## Credits
