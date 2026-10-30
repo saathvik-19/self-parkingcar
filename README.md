@@ -2,7 +2,7 @@
 
 A small autonomous car that drives to a parking-lot gate, receives a slot number over Wi-Fi from the lot's controller, drives to that slot without line following, checks the slot is free, and parks. It grew out of an obstacle-avoiding car (Arduino Uno, simulated in Tinkercad) and was rebuilt around an ESP32 so the car and the lot can talk to each other directly.
 
-
+> **Edit the Status and Results sections before publishing so they match what you have actually tested.** Everything below is written to be honest about what works and what does not yet.
 
 ![Car wiring](hardware/car_wiring_diagram.png)
 
@@ -81,13 +81,13 @@ More in [`docs/SYSTEM_NOTES.md`](docs/SYSTEM_NOTES.md).
 
 ## Status
 
-
+<!-- Tick only what you have really tested. -->
 
 - [x] Obstacle-avoiding car simulated in Tinkercad (Arduino Uno + L293D stand-in, servo-scanned HC-SR04)
 - [x] 4WD cardboard chassis built, motors verified forward, backward and spin
 - [x] ESP32 uploads working, servo sweeps on its own
 - [x] Soft-start motion sequence runs (straight-line drift being trimmed)
-- [X] HC-SR04 readings verified with the echo divider on the car
+- [ ] HC-SR04 readings verified with the echo divider on the car
 - [ ] Car and lot talking over Wi-Fi on real hardware
 - [ ] Parking lot model built and sensors calibrated
 - [ ] Full autonomous gate-to-slot run
