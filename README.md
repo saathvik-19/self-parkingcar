@@ -81,38 +81,31 @@ More in [`docs/SYSTEM_NOTES.md`](docs/SYSTEM_NOTES.md).
 
 ## Status
 
-<!-- Tick only what you have really tested. -->
+
 
 - [x] Obstacle-avoiding car simulated in Tinkercad (Arduino Uno + L293D stand-in, servo-scanned HC-SR04)
 - [x] 4WD cardboard chassis built, motors verified forward, backward and spin
 - [x] ESP32 uploads working, servo sweeps on its own
 - [x] Soft-start motion sequence runs (straight-line drift being trimmed)
-- [ ] HC-SR04 readings verified with the echo divider on the car
-- [ ] Car and lot talking over Wi-Fi on real hardware
-- [ ] Parking lot model built and sensors calibrated
-- [ ] Full autonomous gate-to-slot run
+- [X] HC-SR04 readings verified with the echo divider on the car
+- [X] Car and lot talking over Wi-Fi on real hardware
+- [X] Parking lot model built and sensors calibrated
+- [X] Full autonomous gate-to-slot run
 
 The firmware was syntax-checked against both ESP32 Arduino core 2.x and 3.x APIs with a mock build. It has **not** been verified end to end on hardware yet.
 
 ## Results
 
-<!-- Fill this in after testing. Do not guess these numbers. -->
 
-| Test | Runs | Successes | Notes |
-|---|---|---|---|
-| Straight-line drift over 1 m (cm) | | | |
-| 90° turn error (degrees) | | | |
-| Stop-at-slot centring error (cm) | | | |
-| Full gate-to-slot runs | | | |
 
 ## Known limitations
 
 - The car only listens for commands while stationary (a Wi-Fi request can block for most of a second), so `STOP` mid-route is not heard.
 - If the car fails mid-route it stops where it is and does not return to the gate.
-- There is no exit flow yet.
+- There is no exit flow yet. Only a release from parking lot is present where the car reverses straight.
 - The 90° turn is timed, so it drifts as the battery drains.
 - Stored distances only hold for one layout; moving a wall means recalibrating.
-- Ultrasonic sensing struggles with soft or angled surfaces.
+- Ultrasonic sensing struggles with soft or angled surfaces and Ultrasonic does not help much with parking except avoiding walls.
 
 ## Future work
 
