@@ -47,7 +47,7 @@ Safety checks: median-of-three sensor readings, two consecutive readings before 
 
 ## Hardware
 
-See [`hardware/BOM.md`](BOM.md) and the wiring diagrams.
+See [`BOM.md`](BOM.md) and the wiring diagrams.
 
 - Car: ESP32 DevKit, L298N, 4 TT gear motors (two per side in parallel, skid steering), SG90 servo, HC-SR04, 2 × 18650 cells for the motors, separate power bank for the ESP32.
 - The HC-SR04 Echo pin is 5 V and the ESP32 is 3.3 V, so Echo goes through a 1 kΩ + 2 kΩ divider.
@@ -124,8 +124,8 @@ The firmware was syntax-checked against both ESP32 Arduino core 2.x and 3.x APIs
 
 ## Credits
 
-- Lot controller and dashboard: [teammates' names, if they wrote or co-wrote it; get their permission before publishing their code].
-- Car firmware and hardware build: [your name].
+- Lot controller and dashboard: AgamPreet Singh, Vivek Bansal
+- Car firmware and hardware build: M M Saathvik
 - AI assistance: parts of the firmware and documentation were developed with help from an AI assistant (Claude). All code was reviewed, built and tested by the author. [Edit this line so it is accurate for you.]
 
 ## License
